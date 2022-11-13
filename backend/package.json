@@ -1,0 +1,29 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "test:runner": "node_modules\\.bin\\cypress open",
+    "test": "node_modules\\.bin\\cypress run --config pageLoadTimeout=100000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cloudinary": "^1.32.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.7.2",
+    "socket.io": "^4.5.3",
+    "stripe": "^10.17.0",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "cypress": "^11.0.1",
+    "nodemon": "^2.0.20"
+  }
+}
