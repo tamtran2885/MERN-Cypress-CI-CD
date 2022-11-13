@@ -1,20 +1,39 @@
 import React, { useState } from "react";
-import { Col, Container, Row, Form, Button } from "react-bootstrap";
+import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Signup.css";
+import { useSignupMutation } from "../../services/appApi";
 
 const Signup = () => {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [signup, { error, isLoading, isError }] = useSignupMutation();
 
-  const handleSubmit = () => {};
+  // Function handling signup of new user
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signup({ name, email, password });
+  };
 
   return (
     <Container>
       <Row>
         <Col md={6} className="signup_form--container">
-          <Form style={{ width: "100%" }}>
+          <Form style={{ width: "100%" }} onSubmit={handleSubmit}>
             <h1>Register your new account: </h1>
+            {isError && <Alert variant="danger">{error.data}</Alert>}
+            <Form.Group className="mb-3">
+              <Form.Label>Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Please enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              ></Form.Control>
+            </Form.Group>
+
             <Form.Group className="mb-3">
               <Form.Label>Email Address</Form.Label>
               <Form.Control
@@ -38,7 +57,9 @@ const Signup = () => {
             </Form.Group>
 
             <Form.Group>
-              <Button type="submit">Submit</Button>
+              <Button type="submit" disabled={isLoading}>
+                Submit
+              </Button>
             </Form.Group>
 
             <p className="pt-3 text-center">

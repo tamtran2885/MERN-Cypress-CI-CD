@@ -12,7 +12,7 @@ const io = new Server(server, {
   methods: "*",
 });
 
-const User = require("./models/User.model");
+// const User = require("./models/User.model");
 const userRoutes = require("./routes/userRoutes");
 
 app.use(cors());
