@@ -4,6 +4,7 @@
 
 ### Technologies:
 
+- Testing: Javascript
 - Front-end: React
 - Backend: NodeJS, MongoDB, Express
 
