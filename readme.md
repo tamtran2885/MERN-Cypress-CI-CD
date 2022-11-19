@@ -1,21 +1,10 @@
-# E-commerce-Testing
+# E-commerce-e2e-Testing
 
-## Tools
-
-### Technologies:
-
-- Testing: Javascript
-- Front-end: React
-- Backend: NodeJS, MongoDB, Express
-
-### Test Management Tools:
-
-- TestRail
-
-### Automation Test Framework:
+## Testing Tool/Framework
 
 - Cypress
 
-## Rest-API-Testing
+### Technologies:
 
-## UI-Testing
+- Front-end: React
+- Backend: NodeJS, MongoDB, Express

@@ -15,6 +15,8 @@ const Navigation = () => {
     dispatch(logout());
   };
 
+  console.log(user);
+
   return (
     <Navbar bg="light" expand="lg">
       <Container>
@@ -30,7 +32,22 @@ const Navigation = () => {
                 <Nav.Link>Login</Nav.Link>
               </LinkContainer>
             )}
-            {/* If user */}
+
+            {/* If use is not admin */}
+            {user && !user.isAdmin && (
+              <LinkContainer to="/cart">
+                <Nav.Link>
+                  <i className="fas fa-shopping-cart"></i>
+                  {user && user.cart.count > 0 && (
+                    <span className="badge badge-warning" id="cartcount">
+                      {user.cart.count}
+                    </span>
+                  )}
+                </Nav.Link>
+              </LinkContainer>
+            )}
+
+            {/* If user is admin */}
             {user && (
               <NavDropdown title={`${user.email}`} id="basic-nav-dropdown">
                 {user.isAdmin && (

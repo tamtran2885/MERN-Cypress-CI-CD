@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const mongoose = require("mongoose");
 
-const connectionStr = `mongodb+srv://ecommerce:${process.env.MONGO_PASS}@cluster0.0mzhp6a.mongodb.net/?retryWrites=true&w=majority`;
+const connectionStr = process.env.MONGO_URL;
 
 mongoose
   .connect(connectionStr, {

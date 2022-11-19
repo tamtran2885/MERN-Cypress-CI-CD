@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
-import { Link } from "react-router-dom";
-import "./Signup.css";
+import { Link, useNavigate } from "react-router-dom";
 import { useSignupMutation } from "../../services/appApi";
+import "./Signup.css";
 
 const Signup = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signup, { error, isLoading, isError }] = useSignupMutation();
+  const auth = JSON.parse(localStorage.getItem("persist:root"));
 
   // Function handling signup of new user
   const handleSubmit = (e) => {
@@ -21,11 +23,12 @@ const Signup = () => {
       <Row>
         <Col md={6} className="signup_form--container">
           <Form style={{ width: "100%" }} onSubmit={handleSubmit}>
-            <h1>Register your new account: </h1>
+            <h1 id="heading">Register your new account: </h1>
             {isError && <Alert variant="danger">{error.data}</Alert>}
             <Form.Group className="mb-3">
               <Form.Label>Name</Form.Label>
               <Form.Control
+                id="name"
                 type="text"
                 placeholder="Please enter your name"
                 value={name}
@@ -37,6 +40,7 @@ const Signup = () => {
             <Form.Group className="mb-3">
               <Form.Label>Email Address</Form.Label>
               <Form.Control
+                id="email"
                 type="email"
                 placeholder="Please enter a valid email"
                 value={email}
@@ -48,6 +52,7 @@ const Signup = () => {
             <Form.Group className="mb-3">
               <Form.Label>Password</Form.Label>
               <Form.Control
+                id="password"
                 type="password"
                 placeholder="Please enter password"
                 value={password}

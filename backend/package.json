@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon server.js",
+    "server": "node server.js",
+    "watch": "nodemon server.js",
     "test:runner": "node_modules\\.bin\\cypress open",
     "test": "node_modules\\.bin\\cypress run --config pageLoadTimeout=100000"
   },
@@ -18,6 +19,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.7.2",
+    "my-shopping": "file:..",
     "socket.io": "^4.5.3",
     "stripe": "^10.17.0",
     "validator": "^13.7.0"

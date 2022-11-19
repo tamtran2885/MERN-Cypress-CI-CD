@@ -1,0 +1,27 @@
+{
+  "name": "my-shopping",
+  "version": "1.0.0",
+  "description": "- Testing: Javascript\r - Front-end: React\r - Backend: NodeJS, MongoDB, Express",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "npm install --prefix backend",
+    "install-client": "npm install -prefix frontend",
+    "install": "npm run install-server && npm run install-client",
+    "server": "npm run watch --prefix backend",
+    "client": "npm run start --prefix frontend",
+    "watch": "npm run client & npm run server",
+    "deploy": "npm run build --prefix frontend && npm start --prefix backend",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamtran2885/ecommerce-testing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamtran2885/ecommerce-testing/issues"
+  },
+  "homepage": "https://github.com/tamtran2885/ecommerce-testing#readme"
+}

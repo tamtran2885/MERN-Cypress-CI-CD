@@ -1,15 +1,18 @@
-# Getting Started with Create React App
+# :koala: E-commerce-application
 
-https://reactjs.org/docs/shallow-renderer.html
+## :dog: Tech Stack
 
-https://www.freecodecamp.org/news/testing-react-hooks/
+**Client:** React, Redux, Bootstrap
 
-https://testing-library.com/docs/react-testing-library/cheatsheet
+**Server:** Node, Express
 
-https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+## :zebra: Installation
 
-https://github.com/do-community/doggy-directory/blob/main/src/App.js
+Install with npm
 
-https://testing-library.com/docs/react-testing-library/cheatsheet/#queries
+```bash
+  git clone <this_url>
+  npm install
+```
 
-https://www.digitalocean.com/community/tutorials/how-to-test-a-react-app-with-jest-and-react-testing-library
+## :sheep: [Demo](https://stately-caramel-5cb3b8.netlify.app/)
