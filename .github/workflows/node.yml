@@ -28,4 +28,4 @@ jobs:
       - run: npm run build --prefix frontend
         env:
           CI: false
-      - run: npm server:ci
+      - run: npm test
