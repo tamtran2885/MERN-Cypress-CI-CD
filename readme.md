@@ -1,6 +1,6 @@
-# E-commerce-e2e-Testing
+# E-commerce-Testing
 
-## Testing Tool/Framework
+## Testing Framework
 
 - Cypress
 
