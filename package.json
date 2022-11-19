@@ -13,15 +13,7 @@
     "deploy": "npm run build --prefix frontend && npm start --prefix backend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tamtran2885/ecommerce-testing.git"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tamtran2885/ecommerce-testing/issues"
-  },
-  "homepage": "https://github.com/tamtran2885/ecommerce-testing#readme"
+  "license": "ISC"
 }

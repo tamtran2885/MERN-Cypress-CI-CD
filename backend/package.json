@@ -19,7 +19,6 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.7.2",
-    "my-shopping": "file:..",
     "socket.io": "^4.5.3",
     "stripe": "^10.17.0",
     "validator": "^13.7.0"
