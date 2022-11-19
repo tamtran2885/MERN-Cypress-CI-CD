@@ -7,7 +7,8 @@
     "server": "node server.js",
     "watch": "nodemon server.js",
     "test:runner": "npx cypress open",
-    "test": "npx cypress run"
+    "test": "npx cypress run",
+    "ci": "start-server-and-test 'npm run server' http://localhost:5000 test"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +21,7 @@
     "express": "^4.18.2",
     "mongoose": "^6.7.2",
     "socket.io": "^4.5.3",
+    "start-server-and-test": "^1.14.0",
     "stripe": "^10.17.0",
     "validator": "^13.7.0"
   },
