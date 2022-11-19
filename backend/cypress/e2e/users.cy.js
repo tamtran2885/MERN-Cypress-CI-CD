@@ -1,19 +1,19 @@
 /// <reference types="cypress" />
 
 describe("API Users test", () => {
-  xit("Create new user", () => {
+  it("Create new user", () => {
     cy.request({
       method: "POST",
       url: "/users/signup",
       body: {
-        name: "test automation",
-        email: "example5@gmail.name",
+        name: "hoang",
+        email: "hoang@gmail.com",
         password: "123456",
       },
     }).then((res) => {
       cy.log(JSON.stringify(res));
       expect(res.status).to.eq(200);
-      expect(res.body).has.property("email", "example5@gmail.name");
+      expect(res.body).has.property("email", "hoang@gmail.com");
     });
   });
 
