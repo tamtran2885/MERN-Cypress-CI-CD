@@ -6,8 +6,8 @@
   "scripts": {
     "server": "node server.js",
     "watch": "nodemon server.js",
-    "test:runner": "node_modules\\.bin\\cypress open",
-    "test": "node_modules\\.bin\\cypress run --config pageLoadTimeout=100000"
+    "test:runner": "npx cypress open",
+    "test": "npx cypress run"
   },
   "keywords": [],
   "author": "",
