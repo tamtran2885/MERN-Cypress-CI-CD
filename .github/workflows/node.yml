@@ -28,5 +28,5 @@ jobs:
       - run: npm run build --prefix frontend
         env:
           CI: false
-      - name: api test
-        run: npm api:test
+      - name: Run api test
+        run: npm run apiTest
