@@ -6,6 +6,7 @@ import "./AddProduct.css";
 import axios from "../../services/axios";
 
 const AddProduct = () => {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
@@ -13,7 +14,6 @@ const AddProduct = () => {
   const [images, setImages] = useState([]);
   const [imgToRemove, setImgToRemove] = useState(null);
 
-  const navigate = useNavigate();
   const [createProduct, { isError, error, isLoading, isSuccess }] =
     useCreateProductMutation();
 

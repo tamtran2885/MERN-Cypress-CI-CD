@@ -12,6 +12,7 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 import Category from "./pages/Category/Category";
 import CartPage from "./pages/CartPage/CartPage";
 import OrdersPage from "./pages/OrdersPage/OrdersPage";
+import AdminDashboard from "./pages/AdminDashboard/AdminDashboard";
 
 /**** Components *****/
 import Navigation from "./components/Navigation/Navigation";
@@ -38,6 +39,12 @@ function App() {
             <>
               <Route path="/cart" element={<CartPage />} />
               <Route path="/orders" element={<OrdersPage />} />
+            </>
+          )}
+
+          {user && user.isAdmin && (
+            <>
+              <Route path="/admin" element={<AdminDashboard />} />
             </>
           )}
           <Route path="/product/:id" element={<ProductPage />} />

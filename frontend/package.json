@@ -24,10 +24,13 @@
     "redux-thunk": "^2.4.2",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "cypress": "^11.1.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "set BUILD_PATH=../backend/public&& react-scripts build",
-    "test": "react-scripts test",
+    "test": "npx cypress run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

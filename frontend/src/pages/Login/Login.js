@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Col, Container, Row, Form, Button, Alert } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useLoginMutation } from "../../services/appApi";
 import "./Login.css";
 
 const Login = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [login, { isError, isLoading, error }] = useLoginMutation();
-  const auth = JSON.parse(localStorage.getItem("persist:root"));
+  // const auth = JSON.parse(localStorage.getItem("persist:root"));
 
   const handleLogin = (e) => {
     e.preventDefault();

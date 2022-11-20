@@ -9,6 +9,7 @@ export const appApi = createApi({
     // baseUrl: "https://ecommerbackend.herokuapp.com",
   }),
   endpoints: (builder) => ({
+    /**** For user ****/
     signup: builder.mutation({
       query: (user) => ({
         url: "/users/signup",
@@ -23,6 +24,8 @@ export const appApi = createApi({
         body: user,
       }),
     }),
+
+    /*** For admin ****/
     createProduct: builder.mutation({
       query: (product) => ({
         url: "/products",
@@ -30,6 +33,22 @@ export const appApi = createApi({
         body: product,
       }),
     }),
+    deleteProduct: builder.mutation({
+      query: ({ product_id, user_id }) => ({
+        url: `/products/${product_id}`,
+        method: "DELETE",
+        body: { user_id },
+      }),
+    }),
+    updateProduct: builder.mutation({
+      query: (product) => ({
+        url: `/products/${product.id}`,
+        body: product,
+        method: "PATCH",
+      }),
+    }),
+
+    /**** For user when purchasing****/
     addToCart: builder.mutation({
       query: (cartInfo) => ({
         url: "/products/add-to-cart",
@@ -72,6 +91,8 @@ export const {
   useSignupMutation,
   useLoginMutation,
   useCreateProductMutation,
+  useDeleteProductMutation,
+  useUpdateProductMutation,
   useAddToCartMutation,
   useRemoveFromCartMutation,
   useIncreaseCartProductMutation,

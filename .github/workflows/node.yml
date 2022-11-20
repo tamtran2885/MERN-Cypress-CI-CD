@@ -25,10 +25,9 @@ jobs:
         with:
           mongodb-version: ${{matrix.mongodb-version}}
       - run: npm install
+      - run: npm app:install
       - run: npm run build --prefix frontend
         env:
           CI: false
       - name: api test
         run: npm api:test
-      - name: e2e client test
-        run: npm client:test
