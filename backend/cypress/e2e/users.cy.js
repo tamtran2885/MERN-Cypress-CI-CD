@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe("API Users test", () => {
-  it("Create new user", () => {
+  xit("Create new user", () => {
     cy.request({
       method: "POST",
       url: "/users/signup",

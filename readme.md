@@ -1,4 +1,4 @@
-# E-commerce-Testing
+# MERN-Cypress-CI-CD-Pipeline
 
 ## Testing Framework
 

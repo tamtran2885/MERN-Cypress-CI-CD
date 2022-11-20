@@ -6,15 +6,20 @@
   "scripts": {
     "install-server": "npm install --prefix backend",
     "install-client": "npm install -prefix frontend",
-    "install": "npm run install-server && npm run install-client",
-    "server": "npm run watch --prefix backend",
+    "install": "npm install && npm run install-server && npm run install-client",
+    "server:watch": "npm run watch --prefix backend",
     "client": "npm run start --prefix frontend",
-    "watch": "npm run client & npm run server",
+    "server": "npm run server --prefix backend",
+    "dev": "concurrently \"npm run client\" \"npm run server:watch\"",
+    "watch": "concurrently \"npm run client\" \"npm run server\"",
     "deploy": "npm run build --prefix frontend && npm start --prefix backend",
-    "client:test": "npm test --prefix frontend",
-    "test": "cd backend && npm run ci"
+    "client:test": "concurrently \"npm run watch\" \"npm test --prefix frontend\"",
+    "api:test": "cd backend && npm run ci"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.5.0"
+  }
 }
