@@ -9,16 +9,15 @@
     "install": "npm run install-server && npm run install-client",
     "server:watch": "npm run watch --prefix backend",
     "client": "npm run start --prefix frontend",
-    "server": "npm run server --prefix backend",
+    "server": "npm run start --prefix backend",
     "dev": "concurrently \"npm run client\" \"npm run server:watch\"",
-    "watch": "concurrently \"npm run client\" \"npm run server\"",
     "deploy": "npm run build --prefix frontend && npm start --prefix backend",
     "apiTest": "cd backend && npm run ci"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "concurrently": "^7.5.0"
+  "devDependencies": {
+    "concurrently": "^7.6.0"
   }
 }
