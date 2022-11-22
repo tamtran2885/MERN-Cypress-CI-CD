@@ -8,4 +8,6 @@ RUN npm install --only=production
 
 RUN npm run build --prefix frontend
 
-CMD ["npm", "start"]
+USER node
+
+CMD ["npm", "start", "--prefix", "backend"]
