@@ -1,14 +1,11 @@
 # 🦘 MERN-Cypress-CI-CD-Pipeline
 
-### 🐏 Technologies:
+## 🐏 Technologies/Testing Framework:
 
 - Front-end: React
 - Backend: NodeJS, MongoDB, Express
-- Docker
-
-## 🦓 Testing Framework
-
-- Cypress
+- Testing: Cypress
+- DevOps: Github Actions, Docker
 
 ## :astronaut: Installation
 
