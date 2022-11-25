@@ -42,4 +42,4 @@
 - Build Docker image for the application, and upload it to Docker Hub
 - Deploy application on Amazon ECS using Docker compose
 
-### :angel: Deploy two separated apps
+#### :angel: Deploy two separated apps
