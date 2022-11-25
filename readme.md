@@ -1,6 +1,6 @@
-# 🦘 MERN-Cypress-CI-CD-Pipeline
+# :mushroom: MERN-Cypress-CI-CD-Pipeline
 
-## 🐏 Technologies/Testing Framework:
+## :maple_leaf: Technologies/Testing Framework:
 
 - Front-end: React
 - Backend: NodeJS, MongoDB, Express
@@ -8,13 +8,13 @@
 - Continuos Integration: Github Actions
 - Deploy: Docker, AWS
 
-## :astronaut: Installation
+## :cactus: Installation
 
 ```bash
   npm install
 ```
 
-### 🐨 Docker
+## :chestnut: Docker
 
 - Build a docker image
 
@@ -34,12 +34,24 @@
   docker push <docker-image-name>
 ```
 
-### 🧙‍♂️ Deploy
+## :bamboo: Deploy application on AWS
 
-#### :angel: Deploy one combined app
+### :wind_chime: Deploy one combined app
 
 - Use Node REST API which also renders the React app.
 - Build Docker image for the application, and upload it to Docker Hub
 - Deploy application on Amazon ECS using Docker compose
 
-#### :angel: Deploy two separated apps
+### :wind_chime: Deploy two separated apps
+
+- Deploy Rest API on Amazon using Elastic Beanstalk service.
+- Deploy React application on Amazon using S3 Service.
+
+## :computer: Reference
+
+- [React-Documentation](https://reactjs.org/)
+- [React-Router](https://reactrouter.com/en/main)
+- [Postman](https://www.postman.com/)
+- [Cypress](https://www.cypress.io/)
+- [Docker](https://www.docker.com/)
+- [AWS](https://aws.amazon.com/)
