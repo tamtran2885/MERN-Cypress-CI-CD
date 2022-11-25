@@ -5,7 +5,8 @@
 - Front-end: React
 - Backend: NodeJS, MongoDB, Express
 - Testing: Cypress
-- DevOps: Github Actions, Docker
+- Continuos Integration: Github Actions
+- Deploy: Docker, AWS
 
 ## :astronaut: Installation
 
@@ -32,3 +33,13 @@
 ```bash
   docker push <docker-image-name>
 ```
+
+### 🧙‍♂️ Deploy
+
+#### :angel: Deploy one combined app
+
+- Use Node REST API which also renders the React app.
+- Build Docker image for the application, and upload it to Docker Hub
+- Deploy application on Amazon ECS using Docker compose
+
+### :angel: Deploy two separated apps
